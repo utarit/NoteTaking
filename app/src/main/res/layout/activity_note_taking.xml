@@ -9,10 +9,11 @@
     <EditText
         android:id="@+id/editText"
         android:layout_width="336dp"
-        android:layout_height="261dp"
-        android:layout_marginTop="136dp"
+        android:layout_height="279dp"
+        android:layout_marginTop="60dp"
         android:ems="10"
         android:inputType="textMultiLine"
+        android:singleLine="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"

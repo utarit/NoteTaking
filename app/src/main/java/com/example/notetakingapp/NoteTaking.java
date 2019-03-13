@@ -1,6 +1,7 @@
 package com.example.notetakingapp;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,8 +18,12 @@ public class NoteTaking extends AppCompatActivity {
         String text = noteText.getText().toString();
         ContentValues cont = new ContentValues();
         cont.put("note", text);
-
         database.insert("Notes",null, cont);
+
+        Intent intent = new Intent();
+        intent.putExtra(Intent.EXTRA_TEXT, text);
+        setResult(RESULT_OK, intent);
+        finish();
     }
 
     @Override
